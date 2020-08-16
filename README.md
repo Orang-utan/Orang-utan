@@ -1,4 +1,6 @@
-### Hi there 👋
+### Hey! I'm Daniel 👋
+
+I'm a 🏫 CS student at University of Pennsylvania. 
 
 <!--
 **Orang-utan/Orang-utan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
