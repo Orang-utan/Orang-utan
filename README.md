@@ -7,7 +7,7 @@ Here are some ideas to get you started:
 - 🔭 I’m currently working on Pigeon.
 - 🌱 I’m currently learning distributed systems and WebAssembly.
 - 😄 Pronouns: he / him / his
-- ⚡ Fun fact: I own a pet dogs named Apple and Google.
+- ⚡ Fun fact: I own two pet dogs named Apple and Google.
 
 <!--
 - 👯 I’m looking to collaborate on ...
