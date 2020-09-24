@@ -2,8 +2,6 @@
 
 I'm a student at University of Pennsylvania, studying Computer Science and Marketing / Operations Management. My interest lies in the intersection between web engineering and AI. 
 
-Here are some ideas to get you started:
-
 - 🔭 I’m currently working on Pigeon.
 - 🌱 I’m currently learning distributed systems and WebAssembly.
 - ⚡ Fun fact: I own two pet dogs named Apple and Google.
