@@ -1,6 +1,6 @@
 ### Hey! I'm Daniel 👋
 
-I'm a student at University of Pennsylvania, studying Computer Science and Marketing / Operations Management. My interest lies in the intersection between web engineering and AI. 
+I'm a student at University of Pennsylvania, studying Computer Science and Marketing / Operations Management. I'm a full stack engineer. My technical interest lies in distributed systems and making access to computation "nomadic".
 
 - 🔭 I’m currently working on Pigeon.
 - 🌱 I’m currently learning distributed systems and WebAssembly.
