@@ -1,5 +1,30 @@
-### Hey! I'm Daniel 👋
-
-
-
-
+- Describe input space X and outcome space Y. 
+    - I'm building a binary classifier for the TV Show Shark Tank that determines whether a company is going to be funded by one of the sharks. Assuming the sharks are good at picking the successful companies, this model can help any aspiring investors determine what companies to invest in. The input space will be the company's attributes. The output space will be whether the company is invested by the sharks or not.
+- Describe X and Y formally. 
+    - The X will have 3 features: The main founder's education background (high school graduate, bachelor's degree, master / PhD's degree), a classification of the industry (software, consumer hardware, consumables), and the valuation of the company. The output will be binary indicating whether at least one shark chooses to invest in the company.
+- Natural Probability distribution P over <x, y>.
+    - Here are the following distribution:
+        - Highest education background: 50% has highest degree as high school, 25% has highest degree as college, 25% has highest degree as graduate
+        - Industry distribution is distributed such that there are 60% consumables, 20% software, and 20% hardware.
+        - The valuation distribution is there are 30% that are less than 250K USD, 50% that are between 250K and 750K, and 20% that are above 750K.
+    - A company will only be invested by the sharks:
+        -  if any only if the highest degree is a graduate degree
+        - or if it's a college degree doing software or consumables with valuation under 750K,
+        - or if it's a high school degree doing consumables under 250K.
+    - The probability of getting invested is therefore: 25% + (25% * 80% * 80%) + (50% * 60% * 30%) = 50%
+- Probability Tree with true error to be exactly 0.25
+    - ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Forangutan%2FsUxZ9M7cf8.49.56%20PM.png?alt=media&token=46374d20-51df-4b23-9d45-91d93b51ca29)
+    - To keep it simple, here's the following equations for the indicator:
+        -  $$\omega(h) = I(25\%) + I(25\%*80\%*80\%) + I(25\% * 80\% * 20\%) + I(25\% * 20\%) + I(50\% * 60\% * 30\%) + I(50\% * 60\% * 70\%) + I(50\% * 40\%) = 0.25$$.
+    - We calculate our $$\omega(h)$$ like the following. We first look at those who have college degree & above. That's a 50% probability, then that gets broken down into has master's / PhD degree, which is 25% probability, but that gets predicted wrong entirely, meaning our indicator function for that node is 25% * 1. We look those who have college degree, and are doin software or consumable, with a valuation under 750K, our model is able to predict that correctly, meaning our indicator function is I(25% * 80% * 80%) = I(16%) = 0. Then we look at those who have college, and does hardware, our indicator function is I(25%*20%) = I(5%) = 0. The rest follows the same pattern.
+- List of 10 pairs for which decision tree has training error 0.
+    - 1. X: College student, doing software, with 250K valuation; Y: Invest 
+    - 2. X: College student, doing consumable, with 500K valuation; Y: Invest 
+    - 3) X: High School student doing consumables with 200K valuation; Y: Invest
+    - 4) X: College student doing hardware with 800K valuation;Y: No Investment. 
+    - 5) X: High School Student doing Software, with 200K valuation; Y: No Investment. 
+    - 6) X: High School Student doing consumable with 100K valuation; Y: invest.
+    - 7) X: High School Student doing Hardware, with 750K valuation; Y: No Investment.
+    - 8) X: College Student, doing hardware, with 200K valuation; Y: No Investment.
+    - 9) X: College student, doing consumable, with 100K valuation; Y: invest.
+    - 10) X: College student, doing hardware, with 750K valuation; Y: No Investment.
