@@ -1,3 +1,6 @@
-#### 👋 Hey - I'm Daniel
+# 👋 Hey - I'm Daniel
 
-I built products at Ramp. Reach out to me on Twitter if you want to talk! (@dtjourney)
+I'm the co-founder of Zingage.com. Learn more about us at https://engineering.zingage.com.
+
+Also we're hiring! - Reach out to us at hiring@kuzushi.io
+
